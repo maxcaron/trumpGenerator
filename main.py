@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from faketrumpgen import FacebookPostBuilder
 from flask.ext.bootstrap import Bootstrap
 import os.path
+from crossdomain import crossdomain
 app = Flask(__name__)
 
 Bootstrap(app)
@@ -12,7 +13,8 @@ def hello_world():
     return render_template("main.html")
 
 
-@app.route("/picture", methods=["GET", "POST"])
+@app.route("/picture", methods=["GET", "POST", "OPTIONS"])
+@crossdomain(origin="*")
 def get_picture():
     post = FacebookPostBuilder.CreateTrumpPost(request.args.get("message"),
                                                request.args.get("date"),
