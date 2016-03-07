@@ -1,11 +1,12 @@
 from flask import Flask, render_template, request
 from faketrumpgen import FacebookPostBuilder
 from flask.ext.bootstrap import Bootstrap
+from flask.ext.cors import CORS
 import os.path
-from crossdomain import crossdomain
 app = Flask(__name__)
 
 Bootstrap(app)
+CORS(app)
 
 
 @app.route('/', methods=["GET", "POST"])
@@ -13,8 +14,7 @@ def hello_world():
     return render_template("main.html")
 
 
-@app.route("/picture", methods=["GET", "POST", "OPTIONS"])
-@crossdomain(origin="mighty-coast-69482.herokuapp.com")
+@app.route("/picture", methods=["GET", "POST"])
 def get_picture():
     post = FacebookPostBuilder.CreateTrumpPost(request.args.get("message"),
                                                request.args.get("date"),
