@@ -7,7 +7,6 @@ app = Flask(__name__)
 Bootstrap(app)
 
 
-
 @app.route('/', methods=["GET", "POST"])
 def hello_world():
     return render_template("main.html")
