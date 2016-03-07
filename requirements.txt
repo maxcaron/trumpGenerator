@@ -1,5 +1,5 @@
 dominate==2.1.17
-faketrumpgen==0.9
+faketrumpgen==0.10
 Flask==0.10.1
 Flask-Bootstrap==3.3.5.7
 gunicorn==19.4.5

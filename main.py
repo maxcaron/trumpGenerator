@@ -20,7 +20,6 @@ def get_picture():
                                                debug=False)
     post.create_phrases()
     img_path = "../static/pictures/" + post.post_number + ".jpeg"
-    print(request.query_string)
     return img_path
 
 if __name__ == '__main__':

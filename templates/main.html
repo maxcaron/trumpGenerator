@@ -3,9 +3,12 @@
 {{super()}}
 <link rel="stylesheet" href="../static/css/full-width-pics.css">
 {% endblock %}
-
-{% block title %}This is an example page{% endblock %}
+{% block title %}Trump Generator{% endblock %}
 {% block content %}
+    {% block scripts %}
+    <script src="{{bootstrap_find_resource('jquery.js', cdn='jquery')}}"></script>
+    <script src="{{bootstrap_find_resource('js/bootstrap.js', cdn='bootstrap')}}"></script>
+    {%- endblock scripts %}
     <body>
         <div id="wrap">
             <header class="image-bg-fluid-height"></header>
