@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
 from faketrumpgen import FacebookPostBuilder
 from flask.ext.bootstrap import Bootstrap
-from flask.ext.cors import CORS
 import os.path
 app = Flask(__name__)
 
