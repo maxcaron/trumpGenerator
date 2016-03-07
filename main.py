@@ -14,7 +14,7 @@ def hello_world():
 
 
 @app.route("/picture", methods=["GET", "POST", "OPTIONS"])
-@crossdomain(origin="localhost")
+@crossdomain(origin="mighty-coast-69482.herokuapp.com")
 def get_picture():
     post = FacebookPostBuilder.CreateTrumpPost(request.args.get("message"),
                                                request.args.get("date"),
