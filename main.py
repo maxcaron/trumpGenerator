@@ -6,7 +6,7 @@ import os.path
 app = Flask(__name__)
 
 Bootstrap(app)
-CORS(app)
+
 
 
 @app.route('/', methods=["GET", "POST"])
