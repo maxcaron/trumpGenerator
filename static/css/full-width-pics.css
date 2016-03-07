@@ -1,0 +1,89 @@
+/*!
+ * Start Bootstrap - Full Width Pics HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+.image-bg-fluid-height,
+.image-bg-fixed-height {
+    text-align: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.image-bg-fluid-height {
+	background: url('https://vintageamericanways.com/wp-content/themes/vintageamericanways-2135/images/flag.png') no-repeat center center scroll;
+    padding: 150px;
+}
+
+.section-heading {
+    padding-top: 30px;
+    margin-top: 0;
+    font-size: 4em;
+    text-align: center;
+}
+
+.section-paragraph {
+    margin: 30px 0;
+}
+
+div {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.row{
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+div img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-img {
+    -webkit-transform: rotate(180deg);
+}
+
+html, body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+    width: auto;
+    overflow:auto;
+    padding-bottom:310px; /* this needs to be bigger than footer height*/
+}
+
+.footer{
+  position: relative;
+  margin-top: -300px; /* negative value of footer height */
+  height: 300px;
+  clear:both;
+  padding-top:20px;
+}
+
+header{
+    width: 100%;
+}
+
+.post{
+    margin: 0px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+.well{
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+

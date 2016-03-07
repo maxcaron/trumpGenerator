@@ -1,0 +1,60 @@
+{% extends "bootstrap/base.html" %}
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="../static/css/full-width-pics.css">
+{% endblock %}
+
+{% block title %}This is an example page{% endblock %}
+{% block content %}
+    <body>
+        <div id="wrap">
+            <header class="image-bg-fluid-height"></header>
+            <div id="main" class="container clear-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-10">
+                        <h1 class="section-heading">Trump's Facebook Post Generator</h1>
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-2 col-md-4"></div>
+                    <div class="col-xs-8 col-md-4 center-block">
+                        <div class="input-group">
+                          <span class="input-group-addon" id="sizing-addon2">Date</span>
+                          <input type="text" class="form-control date" placeholder="ex: December 26, 2015" aria-describedby="sizing-addon2">
+                        </div>
+                    </div>
+                    <div class="col-xs-2 col-md-4"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="input-group">
+                          <span class="input-group-addon" id="sizing-addon2">Message</span>
+                          <input type="text" class="form-control message" aria-describedby="sizing-addon2">
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-5 col-xs-5"></div>
+                    <div class="col-sm-2 col-xs-4">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default">Generate</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 col-xs-5"></div>
+                </div>
+                <img class="post" src="">
+            </div>
+            </div>
+            <footer class="footer"><div class="footer-img"><header class="image-bg-fluid-height .footer-img"></header></div></footer>
+        </div>
+    </body>
+    <script type="text/javascript" src="../static/js/script.js"></script>
+{% endblock %}
