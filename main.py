@@ -2,9 +2,13 @@ from flask import Flask, render_template, request
 from faketrumpgen import FacebookPostBuilder
 from flask.ext.bootstrap import Bootstrap
 import os.path
+import sys
+import logging
 app = Flask(__name__)
 
 Bootstrap(app)
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
 
 
 @app.route('/', methods=["GET", "POST"])
