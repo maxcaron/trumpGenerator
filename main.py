@@ -21,7 +21,7 @@ def hello_world():
 def get_picture():
     post = FacebookPostBuilder.CreateTrumpPost(request.args.get("message"),
                                                request.args.get("date"),
-                                               os.path.dirname(os.path.abspath(__file__)) + "../static/pictures",
+                                               os.path.dirname(os.path.abspath(__file__)) + "/static/pictures",
                                                debug=False)
     post.create_phrases()
     img_path = "../static/pictures/" + post.post_number + ".jpeg"
