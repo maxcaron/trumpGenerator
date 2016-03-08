@@ -4,6 +4,7 @@ from flask.ext.bootstrap import Bootstrap
 import os.path
 import sys
 import logging
+import shutil
 app = Flask(__name__)
 
 Bootstrap(app)
@@ -20,13 +21,15 @@ def hello_world():
 def get_picture():
     post = FacebookPostBuilder.CreateTrumpPost(request.args.get("message"),
                                                request.args.get("date"),
-                                               os.path.dirname(os.path.abspath(__file__)) + "/static/pictures",
+                                               os.path.dirname(os.path.abspath(__file__)) + "../static/pictures",
                                                debug=False)
     post.create_phrases()
-    print(post.post_number)
     img_path = "../static/pictures/" + post.post_number + ".jpeg"
+    print("Post number: " + post.post_number)
+    print("Post save path: " + post.save_path)
     print(img_path)
     return img_path
+
 
 if __name__ == '__main__':
     app.run(debug=True)
