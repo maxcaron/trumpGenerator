@@ -4,7 +4,7 @@ from flask.ext.bootstrap import Bootstrap
 import os.path
 import sys
 import logging
-import shutil
+import random
 app = Flask(__name__)
 
 Bootstrap(app)
@@ -24,8 +24,8 @@ def get_picture():
                                                os.path.dirname(os.path.abspath(__file__)) + "/static/pictures",
                                                debug=False)
     post.create_phrases()
-    img_path = "../static/pictures/" + post.post_number + ".jpeg"
-    print("Post number: " + post.post_number)
+    img_path = "../static/pictures/" + str(post.post_number) + ".jpeg"
+    print("Post number: " + str(post.post_number))
     print("Post save path: " + post.save_path)
     print(img_path)
     return img_path
