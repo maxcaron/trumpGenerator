@@ -23,7 +23,9 @@ def get_picture():
                                                os.path.dirname(os.path.abspath(__file__)) + "/static/pictures",
                                                debug=False)
     post.create_phrases()
+    print(post.post_number)
     img_path = "../static/pictures/" + post.post_number + ".jpeg"
+    print(img_path)
     return img_path
 
 if __name__ == '__main__':
