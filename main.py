@@ -4,7 +4,7 @@ from flask.ext.bootstrap import Bootstrap
 import os.path
 import sys
 import logging
-import random
+
 app = Flask(__name__)
 
 Bootstrap(app)
