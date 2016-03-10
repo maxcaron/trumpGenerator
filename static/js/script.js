@@ -17,7 +17,7 @@ $(document).keypress(function(e) {
         var rand_nbr = Math.random()
         $.get("/picture", {date: $(".date").val(), message: $(".message").val(), random: rand_nbr},
             function(image){
-                $(".facebook-meta-pic").attr("content", "https://vintageamericanways.com/wp-content/themes/vintageamericanways-2135/images/flag.png")
+                $(".facebook-meta-pic").attr("content", "http://2.bp.blogspot.com/-AyU9i3PLNv0/VnsbqDxQQpI/AAAAAAAA7ac/u4-OrAvFqwA/s1600/DonaldTrump-funnyface-GOP-debate-15Dec2015.jpg")
                 $(".post").attr("src", image);
                 $(".post").attr("class", "post well center-block");
             }
