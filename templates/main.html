@@ -1,59 +1,83 @@
 {% extends "bootstrap/base.html" %}
 {% block styles %}
-{{super()}}
-<link rel="stylesheet" href="../static/css/full-width-pics.css">
+    {{super()}}
+    <link rel="stylesheet" href="../static/css/full-width-pics.css">
+{% endblock %}
+{% block head %}
+    {{ super() }}
+    <meta property="og:url"           content="http://trumpgenerator.herokuapp.com/templates/main.html" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Donald Trump Generator" />
+    <meta property="og:description"   content="Generate awesome Donald Trump posts" />
+    <meta property="og:image"         content="https://vintageamericanways.com/wp-content/themes/vintageamericanways-2135/images/flag.png"  class="fb-meta-pic"/>
+    <meta property="og:image:type"    content="image/png" />
+    <meta property="og:image:height"  content="327px" />
+    <meta property="og:image:width"   content="1600px" />
 {% endblock %}
 {% block title %}Trump Generator{% endblock %}
 {% block content %}
+
     {% block scripts %}
     <script src="{{bootstrap_find_resource('jquery.js', cdn='jquery')}}"></script>
     <script src="{{bootstrap_find_resource('js/bootstrap.js', cdn='bootstrap')}}"></script>
     {%- endblock scripts %}
-    <body>
+
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=873657752751301";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+
         <div id="wrap">
             <header class="image-bg-fluid-height"></header>
             <div id="main" class="container clear-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-10">
-                        <h1 class="section-heading">Trump's Facebook Post Generator</h1>
-                    </div>
-                    <div class="col-lg-1"></div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-2 col-md-4"></div>
-                    <div class="col-xs-8 col-md-4 center-block">
-                        <div class="input-group">
-                          <span class="input-group-addon" id="sizing-addon2">Date</span>
-                          <input type="text" class="form-control date" placeholder="ex: December 26, 2015" aria-describedby="sizing-addon2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <h1 class="section-heading">Trump's Facebook Post Generator</h1>
                         </div>
+                        <div class="col-lg-1"></div>
                     </div>
-                    <div class="col-xs-2 col-md-4"></div>
-                </div>
 
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8">
-                        <div class="input-group">
-                          <span class="input-group-addon" id="sizing-addon2">Message</span>
-                          <input type="text" class="form-control message" aria-describedby="sizing-addon2">
+                    <div class="row">
+                        <div class="col-xs-2 col-md-4"></div>
+                        <div class="col-xs-8 col-md-4 center-block">
+                            <div class="input-group">
+                              <span class="input-group-addon" id="sizing-addon2">Date</span>
+                              <input type="text" class="form-control date" placeholder="ex: December 26, 2015" aria-describedby="sizing-addon2">
+                            </div>
                         </div>
+                        <div class="col-xs-2 col-md-4"></div>
                     </div>
-                    <div class="col-md-2"></div>
-                </div>
 
-                <div class="row text-center">
-                    <div class="col-sm-12 center-block">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="input-group">
+                              <span class="input-group-addon" id="sizing-addon2">Message</span>
+                              <input type="text" class="form-control message" aria-describedby="sizing-addon2">
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="row text-center">
+                        <div class="col-sm-12 center-block">
                             <button type="button" class="btn btn-default">Generate</button>
+                        </div>
+                        <div class="col-sm-12 center-block">
+                            <div class="fb-share-button" data-href="http://trumpgenerator.herokuapp.com" data-layout="button"></div>
+                        </div>
                     </div>
+                    <img class="post" src="">
                 </div>
-                <img class="post" src="">
-            </div>
             </div>
             <footer class="footer"><div class="footer-img"><header class="image-bg-fluid-height .footer-img"></header></div></footer>
         </div>
-    </body>
     <script type="text/javascript" src="../static/js/script.js"></script>
 {% endblock %}

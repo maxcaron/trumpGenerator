@@ -14,8 +14,10 @@ $(document).ready(function(){
 
 $(document).keypress(function(e) {
     if(e.which == 13) {
-        $.get("/picture", {date: $(".date").val(), message: $(".message").val(), random: Math.random()},
+        var rand_nbr = Math.random()
+        $.get("/picture", {date: $(".date").val(), message: $(".message").val(), random: rand_nbr},
             function(image){
+                $(".facebook-meta-pic").attr("content", "https://vintageamericanways.com/wp-content/themes/vintageamericanways-2135/images/flag.png")
                 $(".post").attr("src", image);
                 $(".post").attr("class", "post well center-block");
             }
