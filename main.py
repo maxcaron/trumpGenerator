@@ -4,9 +4,7 @@ from flask.ext.bootstrap import Bootstrap
 import os.path
 import sys
 import logging
-
 app = Flask(__name__)
-
 Bootstrap(app)
 app.logger.addHandler(logging.StreamHandler(sys.stdout))
 app.logger.setLevel(logging.ERROR)
@@ -25,11 +23,9 @@ def get_picture():
                                                debug=False)
     post.create_phrases()
     img_path = "../static/pictures/" + str(post.post_number) + ".jpeg"
-    print("Post number: " + str(post.post_number))
-    print("Post save path: " + post.save_path)
     print(img_path)
     return img_path
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
