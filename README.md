@@ -1,2 +1,2 @@
 # trumpGenerator
-herokuapp.trumpgenerator.com
+[herokuapp.trumpgenerator.com]
