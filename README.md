@@ -3,4 +3,4 @@
 [![Build Status](https://travis-ci.org/maxcaron/trumpGenerator.svg?branch=master)](https://travis-ci.org/maxcaron/trumpGenerator)
 [![Heroku](http://heroku-badge.herokuapp.com/?app=trumpGenerator&style=flat)]()
 <br>
-trumpgenerator.herokuapp.com
+<https://trumpgenerator.herokuapp.com>
