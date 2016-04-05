@@ -15,15 +15,14 @@ def hello_world():
     return render_template("main.html")
 
 
-@app.route("/picture", methods=["GET"])
+@app.route("/picture", methods=["GET", "POST"])
 def get_picture():
     post = FacebookPostBuilder.CreateTrumpPost(request.args.get("message"),
                                                request.args.get("date"),
                                                os.path.dirname(os.path.abspath(__file__)) + "/static/pictures",
                                                debug=False)
     post.create_phrases()
-    img_path = "../static/pictures/" + str(post.post_number) + ".jpeg"
-    print(img_path)
+    img_path = os.path.dirname(os.path.abspath(__file__)) + "/static/pictures/" + str(post.post_number) + ".jpeg"
     return img_path
 
 
