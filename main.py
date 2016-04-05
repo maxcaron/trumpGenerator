@@ -10,12 +10,12 @@ app.logger.addHandler(logging.StreamHandler(sys.stdout))
 app.logger.setLevel(logging.ERROR)
 
 
-@app.route('/', methods=["GET", "POST"])
+@app.route('/', methods=["GET"])
 def hello_world():
     return render_template("main.html")
 
 
-@app.route("/picture", methods=["GET", "POST"])
+@app.route("/picture", methods=["GET"])
 def get_picture():
     post = FacebookPostBuilder.CreateTrumpPost(request.args.get("message"),
                                                request.args.get("date"),
