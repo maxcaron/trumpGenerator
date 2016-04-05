@@ -23,7 +23,6 @@ def get_picture():
                                                debug=False)
     post.create_phrases()
     img_path = "static/pictures/" + str(post.post_number) + ".jpeg"
-    print(img_path)
     return img_path
 
 
